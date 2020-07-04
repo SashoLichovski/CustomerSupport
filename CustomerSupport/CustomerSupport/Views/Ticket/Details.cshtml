@@ -34,8 +34,11 @@
         </form>
         @foreach (var comment in Model.Comments)
         {
+            <hr />
             <p>@comment.Email</p>
+            <span>Comment:</span>
             <p>@comment.Message</p>
             <p>Created on: @comment.DateCreated.ToString("dd-MMMM-yyyy")</p>
+            <hr />
         }
     </div>
