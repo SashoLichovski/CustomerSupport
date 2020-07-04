@@ -41,7 +41,7 @@ namespace CustomerSupport
             services.AddDbContext<CustomerSupportDbContext>(options =>
             options.UseSqlServer("Data Source=.\\SQLEXPRESS;Initial Catalog=CustomerSupportDb; Integrated Security=True"));
 
-            services.AddDefaultIdentity<User>()
+            services.AddDefaultIdentity<IdentityUser>()
                 .AddRoles<IdentityRole>()
                 .AddEntityFrameworkStores<CustomerSupportDbContext>();
 

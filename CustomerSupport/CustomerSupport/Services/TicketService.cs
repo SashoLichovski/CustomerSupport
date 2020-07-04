@@ -53,8 +53,7 @@ namespace CustomerSupport.Services
 
         public void SetStatus(int id, string status)
         {
-            StatusEnum result = (StatusEnum)Enum.Parse(typeof(StatusEnum), status);
-
+            StatusEnum.TryParse(status, out StatusEnum result);
             var ticket = ticketRepository.GetById(id);
             if (status == "Done")
             {

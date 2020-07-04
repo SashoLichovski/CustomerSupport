@@ -14,9 +14,9 @@ namespace CustomerSupport.Controllers
     public class TicketController : Controller
     {
         private readonly ITicketService ticketService;
-        private readonly UserManager<User> userManager;
+        private readonly UserManager<IdentityUser> userManager;
 
-        public TicketController(ITicketService ticketService, UserManager<User> userManager)
+        public TicketController(ITicketService ticketService, UserManager<IdentityUser> userManager)
         {
             this.ticketService = ticketService;
             this.userManager = userManager;

@@ -1,4 +1,5 @@
 ﻿using CustomerSupport.Models;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace CustomerSupport.Models
 {
-    public class CustomerSupportDbContext : IdentityDbContext<User>
+    public class CustomerSupportDbContext : IdentityDbContext<IdentityUser>
     {
         public CustomerSupportDbContext(DbContextOptions<CustomerSupportDbContext> options) : base(options)
         {

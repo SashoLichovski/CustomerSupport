@@ -12,7 +12,7 @@ namespace CustomerSupport.Models
         public string Message { get; set; }
         public DateTime DateCreated { get; set; }
         public string UserId { get; set; }
-        public User User { get; set; }
+        public IdentityUser User { get; set; }
         public int TicketId { get; set; }
         public Ticket Ticket { get; set; }
     }

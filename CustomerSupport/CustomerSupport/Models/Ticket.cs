@@ -19,7 +19,7 @@ namespace CustomerSupport.Models
         public DateTime? DateClosed { get; set; }
         [Required]
         public StatusEnum Status { get; set; }
-        public User Client { get; set; }
+        public IdentityUser Client { get; set; }
         [Required]
         public string ClientId { get; set; }
         public bool IsDeleted { get; set; }

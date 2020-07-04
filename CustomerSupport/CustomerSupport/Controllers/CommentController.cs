@@ -9,9 +9,9 @@ namespace CustomerSupport.Controllers
     public class CommentController : Controller
     {
         private readonly ICommentService commentService;
-        private readonly UserManager<User> userManager;
+        private readonly UserManager<IdentityUser> userManager;
 
-        public CommentController(ICommentService commentService, UserManager<User> userManager)
+        public CommentController(ICommentService commentService, UserManager<IdentityUser> userManager)
         {
             this.commentService = commentService;
             this.userManager = userManager;
